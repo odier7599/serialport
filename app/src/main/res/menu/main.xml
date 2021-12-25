@@ -6,4 +6,9 @@
         android:textAllCaps="false"
         android:title="清空"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings"
+        app:showAsAction="never"/>
 </menu>
