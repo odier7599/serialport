@@ -2,11 +2,13 @@ package com.ex.serialport;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private Spinner spParity;
     private Spinner spStopb;
     private Spinner spFlowcon;
-
+    private static final String TAG = "MainActivity";
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -276,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        Log.d(TAG, "CreateOptionsMenu");
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main, menu);
         return true;
@@ -283,9 +286,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Log.d(TAG, "onOptionsItemSelected case: ");
         switch (item.getItemId()) {
+            case android.R.id.home:
+                Log.d(TAG, "onOptionsItemSelected:android.R.id.home ");
+                Toast.makeText(getBaseContext(), "导航菜单未实现", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.menu_clean:
                 logListAdapter.clean(); //清空
+                break;
+            case R.id.settings:
+                Toast.makeText(this, "Settings 未实现", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
