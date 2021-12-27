@@ -1,9 +1,9 @@
-package com.ex.serialport.adapter;
+package com.tpv.serialport.adapter;
 
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.ex.serialport.R;
+import com.tpv.serialport.R;
 
 import java.util.List;
 

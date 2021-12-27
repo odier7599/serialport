@@ -1,8 +1,7 @@
-package com.ex.serialport;
+package com.tpv.serialport;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;
-import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -21,8 +20,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.ex.serialport.adapter.LogListAdapter;
-import com.ex.serialport.adapter.SpAdapter;
+import com.tpv.serialport.adapter.LogListAdapter;
+import com.tpv.serialport.adapter.SpAdapter;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
